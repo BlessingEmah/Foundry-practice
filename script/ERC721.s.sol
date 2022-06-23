@@ -2,14 +2,14 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Script.sol";
-import { Counter} from "src/Counter.sol";
+import { ERC721} from "src/ERC721.sol";
 
 contract ContractScript is Script {
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
-        new Counter(10);
+        new ERC721();
         vm.stopBroadcast();
     }
 }
